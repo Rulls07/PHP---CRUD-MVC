@@ -18,7 +18,7 @@ switch ($loc) {
         break;
     case  'edit':
 
-        $text = ("../vue/V_edit.php");
+        $text = ("../vue/V_read.php");
 
         break;
     case  'delete':
