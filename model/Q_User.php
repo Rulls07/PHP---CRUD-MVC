@@ -47,9 +47,9 @@ class Q_User{
     }
     public function deleteUserById($id){
         try {
-            $sth = $this->dbh->prepare("DELETE FROM user WHERE id=$id");
-            $sth->bindParam(1, $id);
-            $sth->execute($id);
+            $sth = $this->dbh->prepare("DELETE FROM user WHERE id=:id");
+            // $sth->bindParam(1, $id);
+            $sth->execute(array(':id' => $id));
         } catch (PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
